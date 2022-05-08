@@ -31,3 +31,6 @@ connection.once("open", () => {
 app.listen(PORT, () => {
   console.log(`<=== Server is up and running on port ${PORT} ====>`);
 });
+
+const PaymentRouter = require("./src/routes/PaymentRoute/PaymentRT");
+app.use("/payment", PaymentRouter);
