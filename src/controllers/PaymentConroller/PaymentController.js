@@ -83,7 +83,7 @@ exports.deletePayment = async (req, res) => {
 exports.getOnePaymentDetail = async (req, res) => {
   let payment_id = req.params.payment_id;
 
-  await Payment.findOne({ payment_id })
+  await Payment.findOne({ _id: payment_id })
     .then((payment) => {
       res.json(payment);
     })
