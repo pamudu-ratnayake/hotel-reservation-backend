@@ -12,26 +12,30 @@ const hotelReservation = new Schema({
     required: true,
   },
   room_type: {
+    type: Array,
+    // required: true,
+  },
+  room_size: {
+    type: Array,
+    // required: true,
+  },
+  facilities: {
+    type: Array,
+    // required: false,
+  },
+  price: {
+    type: Number,
+    // required: true,
+  },
+  con_number: {
     type: String,
     required: true,
   },
-  no_of_rooms: {
+  email: {
     type: String,
     required: true,
   },
-  booking_date: {
-    type: String,
-    required: false,
-  },
-  end_date: {
-    type: String,
-    required: true,
-  },
-  no_of_dates: {
-    type: String,
-    required: true,
-  },
-  additional_notes: {
+  description: {
     type: String,
     required: true,
   }
