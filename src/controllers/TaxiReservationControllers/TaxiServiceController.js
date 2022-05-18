@@ -78,7 +78,7 @@ exports.deleteTaxi = async (req, res) => {
   exports.getOneTaxiDetail = async (req, res) => {
     let taxi_id = req.params.taxi_id;
   
-    await Taxi.findOne({ taxi_id })
+    await Taxi.findOne({ _id: taxi_id })
       .then((taxi) => {
         res.json(taxi);
       })

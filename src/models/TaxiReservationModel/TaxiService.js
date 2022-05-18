@@ -21,11 +21,11 @@ const taxiDetails = new Schema({
   },
   distance: {
     type: String,
-    required: false,
+    // required: false,
   },
   driver_con_no: {
     type: String,
-    required: true,
+    // required: true,
   },
   driver_description: {
     type: String,
