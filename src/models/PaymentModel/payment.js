@@ -5,27 +5,27 @@ const Schema = mongoose.Schema;
 const paymentDetails = new Schema({
   email: {
     type: String,
-    required: true,
+    // required: true,
   },
   card_number: {
     type: String,
-    required: true,
+    // required: true,
   },
   cvc_number: {
     type: String,
-    required: false,
+    // required: false,
   },
   expiration_date: {
     type: String,
-    required: true,
+    // required: true,
   },
   customer_name: {
     type: String,
-    required: true,
+    // required: true,
   },
   amount: {
     type: String,
-    required: true,
+    // required: true,
   },
 });
 
