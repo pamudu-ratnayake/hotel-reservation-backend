@@ -36,3 +36,5 @@ const TaxirRouter = require("./src/routes/TaxiReservationRoute/TaxiServiceRT.js"
 app.use("/taxi", TaxirRouter);
 const hotelReservationRouter = require("./src/routes/HotelDetailsRoutes/HotelReservationRT.js");
 app.use("/hotelreservation", hotelReservationRouter);
+const TravelerRouter = require("./src/routes/TravelerReservatoinRoutes/TravelerRoutes");
+app.use("/traveler", TravelerRouter);
