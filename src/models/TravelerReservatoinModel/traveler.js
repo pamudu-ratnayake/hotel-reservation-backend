@@ -11,15 +11,47 @@ const TravelerSchema = new mongoose.Schema({
   type: String,
   required: true,
   },
- 
-  Traveler_email: {
+
+  NIC: {
     type: String,
     required: true,
   },
-  Traveler_contact_Number: {
+
+    Address: {
+      type: String,
+      required: true,
+  },
+ 
+  Email: {
     type: String,
     required: true,
-  }
+  },
+
+  Contact_Number: {
+    type: String,
+    required: true,
+  },
+
+  CheckInDate: {
+    type: String,
+    // required: true,
+  },
+
+  numberOfNights: {
+    type: String,
+    required: true,
+  },
+
+  Room_Type: {
+    type: String,
+    required: true,
+  },
+
+  numberOfRooms: {
+    type: String,
+    required: true,
+  },
+
 
 });
 

@@ -4,14 +4,26 @@ const addReservation = (req,res,next) => {
 
     const Traveler_Name = req.body.Traveler_Name;
     const Traveler_ID = req.body.Traveler_ID;
-    const Traveler_email = req.body.Traveler_email;
-    const Traveler_contact_Number = req.body.Traveler_contact_Number;
+    const NIC = req.body.NIC;
+    const Address = req.body.Address;
+    const Email = req.body.Email;
+    const Contact_Number = req.body.Contact_Number;
+    const checkInDate = req.body.checkInDate;
+    const numberOfNights = req.body.numberOfNights;
+    const Room_Type = req.body.Room_Type;
+    const numberOfRooms = req.body.numberOfRooms;
 
     const newTraveler = new Traveler({
         Traveler_Name,
         Traveler_ID,
-        Traveler_email,
-        Traveler_contact_Number
+        NIC,
+        Address,
+        Email,
+        checkInDate ,
+        Contact_Number,
+        numberOfNights,
+        Room_Type,
+        numberOfRooms
 
     });
     newTraveler
@@ -37,19 +49,26 @@ const viewReservation = (req, res, next) => {
   //--------update-----------
 const updateReservation = async (req, res, next) => {
   const reservationid = req.params.id;
-  const { Traveler_Name,Traveler_ID, Traveler_email, Traveler_contact_Number} =
+  const { Traveler_Name,Traveler_ID, NIC, Address,Email,Contact_Number,CheckInDate,numberOfNights,Room_Type,numberOfRooms} =
     req.body;
 
   const updateTraveler = {
     Traveler_Name,
     Traveler_ID,
-    Traveler_email,
-    Traveler_contact_Number
-   
+    NIC,
+    Address,
+    Email,
+    Contact_Number,
+    CheckInDate,
+    numberOfNights,
+    Room_Type,
+    numberOfRooms
+    
+  
   };
 
   const update = await Traveler.findByIdAndUpdate(
-    reservationid,
+    { _id : reservationid},
     updateTraveler
   )
     // .then((update) => {
