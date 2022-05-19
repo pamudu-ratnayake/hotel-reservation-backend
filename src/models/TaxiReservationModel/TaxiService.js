@@ -3,7 +3,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const taxiDetails = new Schema({
-  driver_name: {
+  Pick_up_point: {
+    type: String,
+    required: true,
+  },
+  Where_to: {
+    type: String,
+    required: true,
+  },
+  Pich_up_time: {
     type: String,
     required: true,
   },
@@ -11,15 +19,7 @@ const taxiDetails = new Schema({
     type: String,
     required: true,
   },
-  vehicle_name: {
-    type: String,
-    required: true,
-  },
-  vehicle_no: {
-    type: String,
-    required: true,
-  },
-  distance: {
+  Delivery_notes: {
     type: String,
     // required: false,
   },

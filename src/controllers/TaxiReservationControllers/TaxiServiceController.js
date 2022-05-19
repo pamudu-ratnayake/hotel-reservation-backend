@@ -1,20 +1,20 @@
 let Taxi = require("../../models/TaxiReservationModel/TaxiService");
 
 exports.postTaxiDetails = (req, res, next) => {
-    const driver_name = req.body.driver_name;
+    const Pick_up_point = req.body.Pick_up_point;
+    const Where_to = req.body.Where_to;
+    const Pich_up_time = req.body.Pich_up_time;
     const vehicle_type = req.body.vehicle_type;
-    const vehicle_name = req.body.vehicle_name;
-    const vehicle_no = req.body.vehicle_no;
-    const distance = req.body.distance;
+    const Delivery_notes = req.body.Delivery_notes;
     const driver_con_no = req.body.driver_con_no;
     const driver_description = req.body.driver_description;
 
     const newTaxiDetails = new Taxi({
-        driver_name,
+        Pick_up_point,
+        Where_to,
+        Pich_up_time,
         vehicle_type,
-        vehicle_name,
-        vehicle_no,
-        distance,
+        Delivery_notes,
         driver_con_no,
         driver_description
     });
@@ -40,14 +40,14 @@ exports.getTaxiDetails = (req, res, next) => {
 
 exports.updateTaxtDetails = async (req, res) => {
     let taxi_id = req.params.taxi_id;
-    const {driver_name, vehicle_type, vehicle_name, vehicle_no, distance, driver_con_no, driver_description} = req.body;
+    const {Pick_up_point, Where_to, Pich_up_time, vehicle_type, Delivery_notes, driver_con_no, driver_description} = req.body;
 
     const taxiUpdate = {
-        driver_name,
+        Pick_up_point,
+        Where_to,
+        Pich_up_time,
         vehicle_type,
-        vehicle_name,
-        vehicle_no,
-        distance,
+        Delivery_notes,
         driver_con_no,
         driver_description
     };
