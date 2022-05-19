@@ -34,3 +34,5 @@ app.listen(PORT, () => {
 
 const TaxirRouter = require("./src/routes/TaxiReservationRoute/TaxiServiceRT.js");
 app.use("/taxi", TaxirRouter);
+const hotelReservationRouter = require("./src/routes/HotelDetailsRoutes/HotelReservationRT.js");
+app.use("/hotelreservation", hotelReservationRouter);
